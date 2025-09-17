@@ -53,15 +53,5 @@ Backend service built with Node.js, Express, PostgreSQL, Prisma and Socket.IO.
   { "userId": 1, "pollOptionId": 2 }
   ```
 
-## Real-time
-- Clients should connect to Socket.IO on the same host (port 4000).
-- To subscribe to updates for a poll, emit: `joinPoll` with payload `{ pollId }`.
-- When a vote is cast, the server emits `pollUpdated` to that poll room with updated counts.
-
-## Deployment
-- Push repository to GitHub and use Render / Railway / Heroku.
-- Ensure `DATABASE_URL` env var is set in hosting provider.
-- Start command: `node src/index.js`
-
 ## Notes
 - This project uses simple password hashing with `bcryptjs`. For production, implement full auth (JWT, refresh tokens) and secure env handling.
